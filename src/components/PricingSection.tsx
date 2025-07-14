@@ -52,71 +52,109 @@ export default function PricingSection() {
   }
 
   return (
-    <div id="pricing" className="py-20 bg-white dark:bg-gray-900">
+    <div id="pricing" className="py-20 bg-gradient-to-br from-purple-50 via-blue-50 to-indigo-50 dark:from-purple-900 dark:via-blue-900 dark:to-indigo-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-            Simple, Transparent Pricing
+          <div className="inline-flex items-center bg-green-100 dark:bg-green-900/30 rounded-full px-6 py-2 mb-6">
+            <span className="text-green-800 dark:text-green-200 text-sm font-bold">
+              🎯 Limited Time: Launch Special Price
+            </span>
+          </div>
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+            Simple, Transparent 
+            <span className="block bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
+              Pricing
+            </span>
           </h2>
-          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
             One price. Lifetime access. No subscriptions, no hidden fees, no limits.
+            <span className="block font-semibold text-blue-600 dark:text-blue-400 mt-2">
+              Pay once, use forever! 🚀
+            </span>
           </p>
         </div>
 
         {/* Main Pricing Card */}
-        <div className="max-w-md mx-auto mb-16">
-          <div className="bg-white dark:bg-gray-800 rounded-lg shadow-xl border-2 border-primary-500 relative overflow-hidden">
-            {/* Popular Badge */}
-            <div className="absolute top-0 right-0 bg-primary-600 text-white px-4 py-1 text-sm font-medium rounded-bl-lg">
-              Most Popular
-            </div>
+        <div className="max-w-lg mx-auto mb-16">
+          <div className="relative">
+            {/* Glow effect */}
+            <div className="absolute inset-0 bg-gradient-to-r from-purple-400 to-blue-400 rounded-3xl blur-xl opacity-30 animate-pulse"></div>
             
-            <div className="p-8">
-              <div className="text-center mb-8">
-                <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
-                  ProcessFlow Pro
-                </h3>
-                <p className="text-gray-600 dark:text-gray-300">
-                  Lifetime Access
-                </p>
+            <div className="relative bg-white/95 dark:bg-gray-800/95 backdrop-blur-sm rounded-3xl shadow-2xl border-2 border-purple-200 dark:border-purple-700 overflow-hidden">
+              {/* Popular Badge */}
+              <div className="absolute top-0 right-0 bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-2 text-sm font-bold rounded-bl-2xl">
+                🔥 Most Popular
               </div>
-
-              <div className="text-center mb-8">
-                <div className="text-5xl font-bold text-gray-900 dark:text-white">
-                  $29.99
-                </div>
-                <div className="text-gray-500 dark:text-gray-400 mt-2">
-                  One-time payment
-                </div>
-                <div className="text-sm text-green-600 dark:text-green-400 mt-1">
-                  Save $5,000+ vs hiring consultants
-                </div>
-              </div>
-
-              <button
-                onClick={handlePurchase}
-                className="w-full bg-primary-600 text-white py-4 px-6 rounded-lg text-lg font-semibold hover:bg-primary-700 transition-colors shadow-lg hover:shadow-xl transform hover:scale-105 duration-200 mb-6"
-              >
-                Get Lifetime Access Now
-              </button>
-
-              <div className="text-center text-sm text-gray-500 dark:text-gray-400 mb-8">
-                ✅ 30-Day Money-Back Guarantee<br />
-                ✅ Instant Access After Purchase<br />
-                ✅ No Monthly Fees Ever
-              </div>
-
-              {/* Features List */}
-              <div className="space-y-3">
-                {features.map((feature, index) => (
-                  <div key={index} className="flex items-center">
-                    <svg className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                    <span className="text-gray-700 dark:text-gray-300">{feature}</span>
+              
+              <div className="p-10">
+                <div className="text-center mb-10">
+                  <div className="inline-flex items-center bg-gradient-to-r from-purple-100 to-blue-100 dark:from-purple-900/30 dark:to-blue-900/30 rounded-full px-4 py-2 mb-4">
+                    <span className="text-purple-800 dark:text-purple-200 text-sm font-bold">
+                      💎 ProcessFlow Pro
+                    </span>
                   </div>
-                ))}
+                  <h3 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">
+                    Lifetime Access
+                  </h3>
+                  <p className="text-gray-600 dark:text-gray-300">
+                    Everything you need to document processes
+                  </p>
+                </div>
+
+                <div className="text-center mb-10">
+                  <div className="relative">
+                    <div className="text-6xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
+                      $29.99
+                    </div>
+                    <div className="absolute -top-2 -right-2 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-full rotate-12">
+                      Save 99%
+                    </div>
+                  </div>
+                  <div className="text-gray-500 dark:text-gray-400 mt-2 line-through">
+                    Regular price: $2,999
+                  </div>
+                  <div className="text-lg text-green-600 dark:text-green-400 font-bold mt-1">
+                    💰 Save $5,000+ vs hiring consultants
+                  </div>
+                </div>
+
+                <button
+                  onClick={handlePurchase}
+                  className="w-full relative group bg-gradient-to-r from-purple-600 to-blue-600 text-white py-5 px-8 rounded-2xl text-xl font-bold shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-200 overflow-hidden mb-8"
+                >
+                  <div className="absolute inset-0 bg-gradient-to-r from-purple-700 to-blue-700 opacity-0 group-hover:opacity-100 transition-opacity duration-200"></div>
+                  <span className="relative flex items-center justify-center">
+                    <span className="mr-3 group-hover:animate-bounce">🚀</span>
+                    Get Lifetime Access Now
+                    <span className="ml-3 group-hover:animate-bounce">🚀</span>
+                  </span>
+                </button>
+
+                <div className="text-center text-sm text-gray-500 dark:text-gray-400 mb-8 space-y-2">
+                  <div className="flex items-center justify-center">
+                    <span className="text-green-500 mr-2">✅</span>
+                    <span className="font-semibold">30-Day Money-Back Guarantee</span>
+                  </div>
+                  <div className="flex items-center justify-center">
+                    <span className="text-green-500 mr-2">✅</span>
+                    <span className="font-semibold">Instant Access After Purchase</span>
+                  </div>
+                  <div className="flex items-center justify-center">
+                    <span className="text-green-500 mr-2">✅</span>
+                    <span className="font-semibold">No Monthly Fees Ever</span>
+                  </div>
+                </div>
+
+                {/* Features List */}
+                <div className="space-y-4">
+                  {features.map((feature, index) => (
+                    <div key={index} className="flex items-center bg-gradient-to-r from-green-50 to-blue-50 dark:from-green-900/20 dark:to-blue-900/20 rounded-lg p-3 border border-green-200 dark:border-green-800/50">
+                      <div className="text-green-500 mr-3 text-lg">✨</div>
+                      <span className="text-gray-700 dark:text-gray-300 font-medium">{feature}</span>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
